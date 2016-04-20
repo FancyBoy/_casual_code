@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+double 
+int main()
+{
+	printf("输完数据按回车！\n");
+	double a, b, c;
+	double d, e, f;
+	double x_1, x_2;
+	printf("aX² + bX + c = 0\n");
+	printf("  a = ");
+	scanf("%lf", &a);
+	printf("  b = ");
+	scanf("%lf", &b);
+	printf("  c = ");
+	scanf("%lf", &c);
+	// e=b*b;
+	// f=4*a*c;
+	// d=e-f;
+	d = (b * b) - (4 * a * c);
+	printf("  Δ=%g", d);
+	if (d > 0)
+	{
+		printf(">0\n");
+		x_1 = (-b + sqrt(d)) / (2 * a);
+		x_2 = (-b - sqrt(d)) / (2 * a);
+
+		printf("  两根为 %g  %g", x_1, x_2);
+	}
+	else if (d == 0)
+	{
+		x_1 = (-b + sqrt(d)) / (2 * a);
+		x_2 = x_1;
+		printf("\n只有一根 %g", x_1);
+	}
+	else
+	{
+		printf("<0\n");
+		printf("  无解");
+	
+	}
+	return 0;
+}

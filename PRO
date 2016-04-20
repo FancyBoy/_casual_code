@@ -1,0 +1,29 @@
+#include <stdio.h>
+float Calculate(float l ,float w,float h);
+int main()
+{
+	float m_l;
+	float m_w;
+	float m_h;
+	float result;
+	printf("☆计算长方体体积☆\n\n");
+	
+	printf("请输入该长方体的长度:\n");
+	scanf("%g",&m_l);
+	
+	printf("请输入该长方体的宽度:\n");
+	scanf("%g",&m_w);
+	
+	printf("请输入该长方体的高度:\n");
+	scanf("%g",&m_h);
+	
+	result=Calculate(m_l,m_w,m_h);
+	printf("该长方体体积是:\n%g",result);
+	return 0;
+	
+}
+float Calculate(float l ,float w,float h)
+{
+	float result=l*w*h;
+	return result;
+	}
